@@ -87,18 +87,9 @@ form button {
     padding: 4px 10px;
 }
 
-/* img.imgPoster {
-    cursor: pointer;
-} */
-
 audio {
     width: 200px;
     height: 30px;
-}
-
-p.runtime {
-    /* margin-top: -30px;
-    text-align: left; */
 }
 
 ul.movies {
@@ -141,10 +132,6 @@ li {
     flex-basis: 50%;
 }
 
-.container h2 {
-    font-weight: 300;
-}
-
 .container p {
     text-align: left;
 }
@@ -166,6 +153,14 @@ img.imdb {
 
 h1.title {
     width: max-content;
+    position: relative;
+}
+
+p.runtime {
+    font-size: 14px;
+    position: absolute;
+    left: 0;
+    font-weight: lighter;
 }
 
 @media all and (max-width: 600px) {

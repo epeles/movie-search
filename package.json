@@ -1,0 +1,16 @@
+{
+  "name": "movies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prod": "parcel index.html --open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/runtime": "^7.11.2",
+    "parcel-bundler": "^1.12.4"
+  }
+}
