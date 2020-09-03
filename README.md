@@ -1,1 +1,3 @@
-# movie-search
+# Movie Search
+npm i
+npm run prod
