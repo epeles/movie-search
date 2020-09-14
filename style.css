@@ -3,9 +3,10 @@
 }
 
 body {
-    background-color: silver;
+    background-color: #373b69;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
+    color: #ffffffd8;
 }
 
 button {
@@ -22,17 +23,19 @@ button:focus {
 }
 
 header {
-    background-image: url(https://img2.gratispng.com/20180401/tze/kisspng-cinema-film-movie-theatre-5ac06862efe2e8.5141006915225590749826.jpg);
+    background-image: url(./img/pngwing.png);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 30rem;
     background-position: center center;
-    color: #ffffff;
+    color: #fffffff6;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     padding: 80px 0;
     position: relative;
+    letter-spacing: .8rem;
+    text-transform: uppercase;
 }
 
 header::after {
@@ -42,15 +45,11 @@ header::after {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgba(0,0,0,0.3);
+    /* background-color: rgba(0,0,0,0.3); */
 }
 
 header * {
     z-index: 1;
-}
-
-h1 {
-    margin: 0 0 30px;
 }
 
 form {
@@ -61,10 +60,22 @@ form {
 
 form input {
     border: 0;
+    background-color: #373b69;
+    border: 1px solid #ffffff;
     border-radius: 50px;
     font-size: 16px;
     padding: 15px 30px;
     width: 100%;
+    color: whitesmoke;
+    opacity: 0.7;
+}
+
+form input:focus {
+    background-color: #1c2152;
+}
+
+form input::placeholder {
+    color: #fffffff6;
 }
 
 form button {
@@ -76,7 +87,8 @@ form button {
     border-radius: 50px;
     color: #ffffff;
     font-size: 16px;
-    padding: 13px 30px;
+    padding: 14px 30px;
+    /* opacity: 1; */
 }
 
 .btn {
@@ -87,14 +99,10 @@ form button {
     padding: 4px 10px;
 }
 
-audio {
-    width: 200px;
-    height: 30px;
-}
-
 ul.movies {
     list-style-type: none; /* remove o bullet icon da lista */
     padding: 0; /*remove o espaço default da lista */
+    margin-top: -15px;
 }
 
 ul.movies li {
@@ -147,13 +155,14 @@ li {
 }
 
 img.imdb {
-    margin-left: -22px;
+    margin-left: -23px;
     margin-top: -30px;
 }
 
 h1.title {
     width: max-content;
     position: relative;
+    margin: 0 0 30px;
 }
 
 p.runtime {
@@ -161,6 +170,24 @@ p.runtime {
     position: absolute;
     left: 0;
     font-weight: lighter;
+    width: inherit;
+}
+
+img.poster {
+    border: #fffffff6 2px solid;
+    object-fit: contain;
+}
+
+h1.html {
+    opacity: 0;
+}
+
+li span.green {color: rgb(39, 189, 39); margin-left: 5px; background-color: black; padding: 0 .2rem; border-radius: .4rem;}
+li span.orange {color: orange; margin-left: 5px; background-color: black; padding: 0 .2rem; border-radius: .4rem;}
+li span.red {color: rgb(189, 42, 42); margin-left: 5px; background-color: black; padding: 0 .2rem; border-radius: .4rem;}
+
+ul.movies li.rating {
+    justify-content: flex-start;
 }
 
 @media all and (max-width: 600px) {
@@ -169,6 +196,10 @@ p.runtime {
     }
     h1.title {
         width: auto;
+    }
+    ul.movies {
+        margin-top: 0;
+        max-width: 305px;
     }
     
 }    
