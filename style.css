@@ -78,6 +78,10 @@ form input::placeholder {
     color: #fffffff6;
 }
 
+form input:focus::placeholder {
+    color: transparent;
+}
+
 form button {
     position: absolute;
     top: 2px;
