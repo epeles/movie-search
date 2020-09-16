@@ -186,9 +186,16 @@ h1.html {
     opacity: 0;
 }
 
-li span.green {color: rgb(39, 189, 39); margin-left: 5px; background-color: black; padding: 0 .2rem; border-radius: .4rem;}
-li span.orange {color: orange; margin-left: 5px; background-color: black; padding: 0 .2rem; border-radius: .4rem;}
-li span.red {color: rgb(189, 42, 42); margin-left: 5px; background-color: black; padding: 0 .2rem; border-radius: .4rem;}
+li span.green {color: rgb(39, 189, 39); }
+li span.orange {color: orange;}
+li span.red {color: rgb(189, 42, 42);}
+
+li span.rating {
+    margin-left: 5px; 
+    background-color: black; 
+    padding: 0 .2rem; 
+    border-radius: .4rem;
+}
 
 ul.movies li.rating {
     justify-content: flex-start;

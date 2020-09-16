@@ -1,4 +1,4 @@
-import 'regenerator-runtime/runtime';
+// import 'regenerator-runtime/runtime';
 
 const form = document.querySelector('#form');
 const search = document.querySelector('#search');
@@ -69,7 +69,7 @@ async function getMovie(movie) {
                 <li>Genre: ${data.Genre}</li>
                 <li>Country: ${data.Country}</li>
                 ${data.totalSeasons ? `<li>Seasons: ${data.totalSeasons}</li>` : ''}
-                <li class="rating">Rating: <span class="${getClassByRate(data.imdbRating)}">${data.imdbRating}</span></li>
+                <li class="rating">Rating: <span class="${getClassByRate(data.imdbRating)} rating">${data.imdbRating}</span></li>
                 <li><a href="https://imdb.com/title/${data.imdbID}" target="_blank"><img class="imdb" src="https://www.iconninja.com/files/627/873/110/imdb-icon.png" data-toggle="tooltip" data-html="true" title="More info about ${data.Title} on IMDb"></a></li>
             </ul>
         </div>    
