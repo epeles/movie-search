@@ -1,4 +1,4 @@
-// import 'regenerator-runtime/runtime';
+import 'regenerator-runtime/runtime';
 
 const form = document.querySelector('#form');
 const search = document.querySelector('#search');
@@ -24,22 +24,22 @@ async function getList(title) {
     
     result.innerHTML = `
     <p class="searchRes">Results for "${title}"</p>
-    <ul class="movies">${data.Search
+    ${data.Search
         .filter(t => (t.Poster !== 'N/A' && t.Type === 'movie' || t.Poster !== 'N/A' && t.Type === 'series'))
         .map(movie => `
-        <li>
-            <img class="imgPoster" src=${movie.Poster} alt="${movie.Title}" width="100px">
-            <span>${movie.Title} (${movie.Year})</span>
-            <button class="btn" data-movietitle="${movie.imdbID}">Get info</button> 
-        </li>`)
+        <div class="movie">
+            <img class="poster_img" src="${movie.Poster}" alt="${movie.Title}" data-movietitle="${movie.imdbID}"/>
+            <div class="movie-info">
+                <h3>${movie.Title}</h3>
+            </div>
+        </div>`)             
         .join('')}
-    </ul>    
     `;
 }    
  
 result.addEventListener('click', e => {
     const clickedEl = e.target;
-    if (clickedEl.tagName === 'BUTTON') {
+    if (clickedEl.tagName === 'IMG') {
       const movieName = clickedEl.dataset.movietitle;
       //OR const movieName = clickedEl.getAttribute('data-movietitle');
       getMovie(movieName);

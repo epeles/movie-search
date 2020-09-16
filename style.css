@@ -9,16 +9,7 @@ body {
     color: #ffffffd8;
 }
 
-button {
-    cursor: pointer;
-}
-
-button:active {
-    transform: scale(0.95);
-}
-
-input:focus, 
-button:focus {
+input:focus {
     outline: none;
 }
 
@@ -50,6 +41,15 @@ header::after {
 
 header * {
     z-index: 1;
+}
+
+img.poster_img {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+img.poster_img:hover {
+    opacity: .7;
 }
 
 form {
@@ -95,31 +95,6 @@ form button {
     /* opacity: 1; */
 }
 
-.btn {
-    background-color: #8d56fd;
-    border: 0;
-    border-radius: 10px;
-    color: #ffffff;
-    padding: 4px 10px;
-}
-
-ul.movies {
-    list-style-type: none; /* remove o bullet icon da lista */
-    padding: 0; /*remove o espaço default da lista */
-    margin-top: -15px;
-}
-
-ul.movies li {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 10px 0;
-}
-
-li {
-    text-align: left;
-}
-
 .container {
     margin: 30px auto;
     max-width: 100%;
@@ -127,6 +102,41 @@ li {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.movie {
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+    margin: 1rem;
+    width: 200px;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.movie-info span {
+    background-color: #22254b;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
 }
 
 .box {
@@ -142,6 +152,19 @@ li {
 
 .box1 {
     flex-basis: 50%;
+}
+
+ul.movies {
+    list-style-type: none; /* remove o bullet icon da lista */
+    padding: 0; /*remove o espaço default da lista */
+    margin-top: -15px;
+}
+
+ul.movies li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
 }
 
 .container p {
@@ -219,6 +242,13 @@ p.searchRes {
     ul.movies {
         margin-top: 0;
         max-width: 305px;
+    }
+    .movie {
+        width: 120px;
+        margin: .5rem;
+    }
+    .movie-info h3 {
+        font-size: .8rem;
     }
     
 }    
